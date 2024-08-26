@@ -13,8 +13,8 @@ class
      }
 public static void main(String args[])
      {
-         student12 s1 = new student12(111, "raaki");
-         student12 s2 = new student12(444, "Arvind");
+         student12 s1 = new student12(136, "Anuram");
+         student12 s2 = new student12(964, "Varma");
             s1.display();
             s2.display();
      }
