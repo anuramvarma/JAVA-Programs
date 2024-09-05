@@ -15,6 +15,7 @@ class Strong_Number
   public static void main(String[] args) 
 {
     Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number : ");
     int num = sc.nextInt();
     int rem,original=num;
 
@@ -26,8 +27,8 @@ class Strong_Number
     num/=10;
   }
    if(sum==original)
-        System.out.println("strong number");
+        System.out.println("It is a Strong number");
    else
-        System.out.println("not a strong number");
+        System.out.println("Not a Strong number");
 }
 }
