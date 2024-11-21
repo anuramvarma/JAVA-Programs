@@ -7,7 +7,7 @@ class Hello
 }
 class Method_Overriding extends Hello
 {
-    void display2()
+    void display()
     {
         System.out.println("AnuramVarma !");
     }
@@ -16,7 +16,7 @@ class Method_Overriding extends Hello
     {
         Method_Overriding obj= new Method_Overriding();
         obj.display();
-        obj.display2();
+        //obj.display();
 
     }
 }
