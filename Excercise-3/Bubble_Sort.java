@@ -18,8 +18,8 @@ static void sort(int a[],int n)
 	}
 }
 
-public static void main(String []args)
-{
+     public static void main(String []args)
+    {
 	
 	Scanner sc = new Scanner(System.in);
 	System.out.println("Enter the array size:");
@@ -27,14 +27,14 @@ public static void main(String []args)
 	int a[] = new int[n];
 	System.out.println("Enter array elements:");
 	for(int i=0;i<n;i++)
-  {
-	a[i]=sc.nextInt();
+        {
+	   a[i]=sc.nextInt();
 	}
 	sort(a,n);
 	System.out.println("The Sorted elements are:");
 	for(int i=0;i<n;i++)
-  {
-	System.out.println(a[i]);
+        {
+	  System.out.println(a[i]);
 	}
-}
+   }
 }
