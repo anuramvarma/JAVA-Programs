@@ -228,5 +228,178 @@ public static void pattern7(int n) {
     }
 }
 ```
+---
+
+## Pattern 8
+
+**Description:** Prints an inverted pyramid of stars with spaces at the beginning of each row.
+**Pattern Type:** Inverted Pyramid
+
+**Output (n=5):**
+
+```
+********* 
+ *******  
+  *****   
+   ***    
+    *     
+```
+
+**Code:**
+
+```java
+public static void pattern8(int n) {
+    System.out.println("----Pattern 8 ----");
+    for (int i = 0; i < n; i++) {
+        // Space
+        for (int j = 0; j < i; j++) {
+            System.out.print(" ");
+        }
+        // Star
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++) {
+            System.out.print("*");
+        }
+        // Space
+        for (int j = 0; j < i; j++) {
+            System.out.print(" ");
+        }
+        System.out.println(" ");
+    }
+}
+```
 
 ---
+
+## Pattern 9
+
+**Description:** Prints a diamond pattern made up of a pyramid followed by an inverted pyramid.
+**Pattern Type:** Diamond Pattern
+
+**Output (n=5):**
+
+```
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+```
+
+**Code:**
+
+```java
+public static void pattern9(int n) {
+    System.out.println("----Pattern 9 ----");
+    // Top pyramid
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            System.out.print(" ");
+        }
+        for (int j = 0; j < 2 * i + 1; j++) {
+            System.out.print("*");
+        }
+        for (int j = 0; j < n - i - 1; j++) {
+            System.out.print(" ");
+        }
+        System.out.println(" ");
+    }
+    // Inverted pyramid
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            System.out.print(" ");
+        }
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++) {
+            System.out.print("*");
+        }
+        for (int j = 0; j < i; j++) {
+            System.out.print(" ");
+        }
+        System.out.println(" ");
+    }
+}
+```
+
+---
+
+## Pattern 10
+
+**Description:** Prints a diamond outline with stars forming a growing and shrinking triangle.
+**Pattern Type:** Double Triangle / Symmetric Pattern
+
+**Output (n=5):**
+
+```
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+```
+
+**Code:**
+
+```java
+public static void pattern10(int n) {
+    System.out.println("----Pattern 10 ----");
+    for (int i = 1; i <= 2 * n - 1; i++) {
+        int star = i;
+        if (i > n) {
+            star = 2 * n - i;
+        }
+        for (int j = 1; j <= star; j++) {
+            System.out.print("* ");
+        }
+        System.out.println(" ");
+    }
+}
+```
+
+---
+
+## Pattern 11
+
+**Description:** Prints a right triangle of `0` and `1` in alternating order.
+**Pattern Type:** Binary Number Triangle
+
+**Output (n=5):**
+
+```
+1 
+0 1 
+1 0 1 
+0 1 0 1 
+1 0 1 0 1 
+```
+
+**Code:**
+
+```java
+public static void pattern11(int n) {
+    System.out.println("----Pattern 11----");
+    int start = 1;
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            start = 1;
+        } else {
+            start = 0;
+        }
+        for (int j = 0; j <= i; j++) {
+            System.out.print(start + " ");
+            start = 1 - start;
+        }
+        System.out.println(" ");
+    }
+}
+```
+
+---
+
