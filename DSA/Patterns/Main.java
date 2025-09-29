@@ -7,13 +7,17 @@ public class Main {
         System.out.print("Enter n : ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        pattern1(n);
-        pattern2(n);
-        pattern3(n);
-        pattern4(n);
-        pattern5(n);
-        pattern6(n);
-        pattern7(n);
+        // pattern1(n);
+        // pattern2(n);
+        // pattern3(n);
+        // pattern4(n);
+        // pattern5(n);
+        // pattern6(n);
+        // pattern7(n);
+        pattern8(n);
+        pattern9(n);
+        pattern10(n);
+        pattern11(n);
     }
 
     public static void pattern1(int n) {
@@ -75,27 +79,112 @@ public class Main {
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n - i + 1; j++) {
-                System.out.print(j+" ");
+                System.out.print(j + " ");
             }
             System.out.println(" ");
         }
     }
-public static void pattern7(int n) {
-    System.out.println("----Pattern 7 ----");
-    for (int i = 0; i < n; i++) {
-        // Space
-        for (int j = 0; j < n - i - 1; j++) {
-            System.out.print(" ");
+
+    public static void pattern7(int n) {
+        System.out.println("----Pattern 7 ----");
+        for (int i = 0; i < n; i++) {
+            // Space
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            // Star
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print("*");
+            }
+            //space
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            System.out.println(" ");
         }
-        // Star
-        for (int j = 0; j < 2 * i + 1; j++) {
-            System.out.print("*");
+    }
+    public static void pattern8(int n) {
+        System.out.println("----Pattern 8 ----");
+        for (int i = 0; i < n; i++) {
+            // Space
+            for (int j = 0; j <i; j++) {
+                System.out.print(" ");
+            }
+            // Star
+            for (int j = 0; j<2*n-(2*i + 1); j++) {
+                System.out.print("*");
+            }
+            //space
+            for (int j = 0; j <i; j++) {
+                System.out.print(" ");
+            }
+            System.out.println(" ");
         }
-        //space
-        for (int j = 0; j < n - i - 1; j++) {
-            System.out.print(" ");
+    }
+    public static void pattern9(int n) {
+        System.out.println("----Pattern 9 ----");
+        for (int i = 0; i < n; i++) {
+            // Space
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            // Star
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print("*");
+            }
+            //space
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            System.out.println(" ");
         }
-        System.out.println(" ");
+        for (int i = 0; i < n; i++) {
+            // Space
+            for (int j = 0; j <i; j++) {
+                System.out.print(" ");
+            }
+            // Star
+            for (int j = 0; j<2*n-(2*i + 1); j++) {
+                System.out.print("*");
+            }
+            //space
+            for (int j = 0; j <i; j++) {
+                System.out.print(" ");
+            }
+            System.out.println(" ");
+        }
+    }
+   
+    public static void pattern10(int n) {
+        System.out.println("----Pattern 10 ----");
+        for (int i = 1; i<=2*n-1; i++) {
+            int star=i;
+            if(i>n){
+                star=2*n-i;
+            }
+            for(int j=1;j<=star;j++){
+                System.out.print("* ");
+            }
+            System.out.println(" ");
+        }
+    }  
+    public static void pattern11(int n) {
+        System.out.println("----Pattern 11----");
+        int start=1;
+
+        for(int i=0;i<n;i++){
+            if(i %2==0){
+                start=1;
+            }
+            else{
+                start=0;
+            }
+            for(int j=0;j<=i;j++){
+                System.out.print(start+" ");
+                start=1-start;
+            }
+
+            System.out.println(" ");
         }
     }
 }
