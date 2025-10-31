@@ -1,8 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
-public class GoBackNProtocol {
-    private static final int MAX_FRAMES = 50;
-    private static final int WINDOW_SIZE = 4;
+class GoBackNProtocol {
+    private static final int MAX_FRAMES = 10;
+    private static final int WINDOW_SIZE = 2;
     // Simulate 20% chance of frame loss
     private static boolean isFrameLost(Random rand) {
         return rand.nextInt(5) == 0; // 1 in 5 chance
@@ -20,7 +20,7 @@ public class GoBackNProtocol {
         }
 
         System.out.println("\n--- Go-Back-N Sliding Window Protocol Simulation ---");
-        System.out.println("Window Size: " + WINDOW_SIZE);
+        System.out.println("Window Size : " + WINDOW_SIZE);
         System.out.println("-----------------------------------------------");
 
         int sent = 0, ack = 0;
@@ -42,7 +42,8 @@ public class GoBackNProtocol {
                     System.out.println("Frame " + (sent + i + 1) + " lost during transmission!");
                     errorIndex = i;
                     break;
-                } else {
+                } 
+                else {
                     System.out.println("Frame " + (sent + i + 1) + " sent successfully.");
                 }
             }
@@ -53,7 +54,7 @@ public class GoBackNProtocol {
                 sent += toSend;
                 ack += toSend;
             } else {
-                System.out.println("⚠️ Receiver: NACK for frame " + (sent + errorIndex + 1) 
+                System.out.println("⚠️ Receiver: NO-ACK for frame " + (sent + errorIndex + 1) 
                 + ". Go-Back-N triggered!");
                 System.out.println("↩️  Receiver discards all frames from " + (sent + errorIndex + 1) 
                 + " onwards.");
@@ -63,7 +64,7 @@ public class GoBackNProtocol {
         }
 
         System.out.println("\n✅ All frames sent and acknowledged successfully!");
-        System.out.println("-----------------------------------------------");
+        System.out.println("------------------------------------------");
         sc.close();
     }
 }
